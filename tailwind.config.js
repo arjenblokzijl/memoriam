@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       domine: 'Domine,serif',
-      montserrat: 'Montserrat,sans-serif'
+      montserrat500: 'Montserrat,sans-serif'
     },
     extend: {
       colors: {
