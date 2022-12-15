@@ -2,7 +2,18 @@
 module.exports = {
   content: ["./pages/**/*.js", "./components/**/*.js"],
   theme: {
-    extend: {},
+    fontFamily: {
+      domine: 'Domine,serif',
+      montserrat: 'Montserrat,sans-serif'
+    },
+    extend: {
+      colors: {
+        'brown': {
+          100: '#DFD8CF',
+          200: '#624A24'
+        }
+      }
+    },
   },
   plugins: [],
 };

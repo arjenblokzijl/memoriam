@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import Sun from "../svg/sun.svg";
 
 export default function Home() {
   return (
@@ -11,37 +12,116 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Agenda</a>
-        </h1>
+      <main className='flex items-center justify-center h-screen bg-slate-100 font-domine'>
+        <div className='w-full max-w-md p-5 bg-white'>
+        
+            <h1 className='pb-4 font-montserrat text-[15px] text-brown-200'> <span className='font-extrabold'>Januari</span> 2022 </h1>
 
-        <p>
-          Get started by editing{' '}
-          <code>pages/index.js</code>
-        </p>
+        
+            <article>
+                <h2 className='p-1 text-sm uppercase bg-brown-100 font-montserrat text-brown-200'> Ochtend </h2>
+            
+                <div className='flex flex-row items-start justify-between py-5'>
+                    
+                    <div className='w-10 h-10 bg-slate-900'><Sun/></div>
+                        
+                    <div className='w-64'>
+                        <h2 className='text-xs text-left text-orange-400'> 08:30 </h2>
+                        <p className='text-4xl font-bold text-left'>Gertjan komt op bezoek</p>
+                    </div>
+                            
+                    <div className='w-5 h-5 bg-slate-900'></div>
+                            
+                </div>
+            </article>
 
-        <div>
-          <Link href="/">
-            <h2>Home &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </Link>
+            <article>
+                <h2 className='p-1 text-sm uppercase bg-brown-100 font-montserrat text-brown-200'> Middag </h2>
+            
+                <div className='flex flex-row items-start justify-between py-4'>
+                    
+                    <div className='w-10 h-10 bg-slate-900'></div>
+                        
+                    <div className='flex-col'>
+                    
+                    <div className='flex items-center justify-between border-b border-solid'>
+                            
+                            <div className='flex flex-col py-1'>
+                                <h2 className='text-xs text-left text-orange-400 '> 10 over 4 </h2>
+                                <p className='text-left text-md'>Logopedie met Anna</p>
+                            </div>
+                            
+                            <div className='w-5 h-5 bg-slate-900'></div>
+                        </div>
 
+                        <div className='flex items-center justify-between border-b border-solid'>
+                            
+                            <div className='flex flex-col py-1'>
+                                <h2 className='text-xs text-left text-orange-400'> Half 5 </h2>
+                                <p className='text-left text-md'>Fysiotherapie met Jan</p>
+                            </div>
+                            
+                            <div className='w-5 h-5 bg-slate-900'></div>
+                        </div>
+
+                        <div className='flex items-center justify-between border-b border-solid w-80'>
+                            
+                            <div className='flex flex-col py-1'>
+                                <h2 className='text-xs text-left text-orange-400'> 2 uur </h2>
+                                <p className='text-left text-md'>Kerstborrel</p>
+                            </div>
+                            
+                            <div className='w-5 h-5 bg-slate-900'></div>
+                        </div>
+
+
+                        <div className='flex items-center justify-between border-b border-solid w-80'>
+                            
+                            <div className='flex flex-col py-1'>
+                                <h2 className='text-xs text-left text-orange-400'> 8 uur </h2>
+                                <p className='text-left text-md'>Karaoke met Rick</p>
+                            </div>
+                            
+                            <div className='w-5 h-5 bg-slate-900'></div>
+                        </div>
+                        
+                    </div>
+                            
+                            
+                </div>
+            </article>
+
+            <article>
+                <h2 className='p-1 text-sm uppercase bg-brown-100 font-montserrat text-brown-200'> Avond </h2>
+            
+                <div className='flex flex-row items-start justify-between py-4'>
+                    
+                    <div className='w-10 h-10 bg-slate-900'></div>
+                        
+                    <div className='flex-col'>
+                    
+                    <div className='flex items-center justify-between w-80'>
+                            
+                            <div className='flex flex-col py-1'>
+                                <h2 className='text-xs text-left text-orange-400 '> Half 5 </h2>
+                                <p className='text-left text-md'>Fysiotherapie met Jan</p>
+                            </div>
+                            
+                            <div className='w-5 h-5 bg-slate-900'></div>
+                        </div>
+                                    
+                    </div>
+                                  
+                </div>
+            </article>
+        
+        
         </div>
+
+
+
       </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   )
 }
