@@ -1,10 +1,23 @@
 import Head from "next/head";
-import { useRef, useState } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
 import Scene from "./components/Scene";
+import { useState, useEffect } from "react";
+import { OrbitControls } from "@react-three/drei";
+
+import { Html } from "@react-three/drei";
 
 export default function Home() {
+  const [date, setDate] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => setDate(new Date()), 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  });
+
   return (
     <div>
       <Head>
@@ -16,7 +29,10 @@ export default function Home() {
       <main className="w-screen h-screen bg-slate-200">
         <Suspense fallback="Ik heb een zwaar leven">
           <Canvas shadows flat linear>
-            <Scene className="min-h-screen" />
+            <Scene className="min-h-screen" date={date} />
+            <OrbitControls />
+
+            <Html>This is going to be an iframe</Html>
           </Canvas>
         </Suspense>
       </main>
