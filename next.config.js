@@ -8,9 +8,8 @@ const nextConfig = {
     });
 
     return config;
-  }
-}
+  },
   staticPageGenerationTimeout: 120,
-};
+}
 
 module.exports = nextConfig;
