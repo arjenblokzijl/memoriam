@@ -4,6 +4,8 @@
 
 import useSpline from "@splinetool/r3f-spline";
 import { OrthographicCamera } from "@react-three/drei";
+import Agenda from "./Agenda";
+import { Mask, Html } from "@react-three/drei";
 
 export default function Scene({
   secondsDegree,
@@ -93,148 +95,150 @@ export default function Scene({
             scale={1.4}
           />
         </group>
-        <mesh
-          name="Glass"
-          geometry={nodes.Glass.geometry}
-          material={nodes.Glass.material}
-          castShadow
-          receiveShadow
-          position={[-540.38, 0, 165.02]}
-          rotation={[Math.PI / 2, 0, 0]}
-        />
+        <group name="clock">
+          <mesh
+            name="Glass"
+            geometry={nodes.Glass.geometry}
+            material={nodes.Glass.material}
+            castShadow
+            receiveShadow
+            position={[-540.38, 0, 165.02]}
+            rotation={[Math.PI / 2, 0, 0]}
+          />
 
-        <group
-          name="Wijzer - groot"
-          position={[-539.38, 1.39, 170.95]}
-          rotation={[0, 0, 100]}
-        >
+          <group
+            name="Wijzer - groot"
+            position={[-539.38, 1.39, 170.95]}
+            rotation={[0, 0, hoursDegree]}
+          >
+            <mesh
+              name="Wijzer wit"
+              geometry={nodes["Wijzer wit"].geometry}
+              material={materials["Wijzer wit Material"]}
+              castShadow
+              receiveShadow
+              position={[0, 99.2, 0]}
+              rotation={[0, 0, 0]}
+            />
+            <mesh
+              name="Wijzer zwart"
+              geometry={nodes["Wijzer zwart"].geometry}
+              material={materials["Wijzer zwart"]}
+              castShadow
+              receiveShadow
+              position={[0, 67.84, 0]}
+              rotation={[0, 0, 0]}
+            />
+          </group>
+          <group
+            name="Wijzer -klein"
+            position={[-539.38, 1, 174.17]}
+            rotation={[0, 0, hoursDegree]}
+          >
+            <mesh
+              name="Wijzer wit1"
+              geometry={nodes["Wijzer wit1"].geometry}
+              material={materials["Wijzer wit1 Material"]}
+              castShadow
+              receiveShadow
+              position={[0, 66.92, 0]}
+              rotation={[0, 0, Math.PI / 2]}
+            />
+            <mesh
+              name="Wijzer zwart1"
+              geometry={nodes["Wijzer zwart1"].geometry}
+              material={materials["Wijzer zwart"]}
+              castShadow
+              receiveShadow
+              position={[0, 44.24, 0]}
+              rotation={[0, 0, Math.PI / 2]}
+            />
+          </group>
+          <group
+            name="Secondenwijzer"
+            position={[-539.38, 0.54, 166.34]}
+            rotation={[0, 0, secondsDegree]}
+          >
+            <mesh
+              name="Ellipse"
+              geometry={nodes.Ellipse.geometry}
+              material={materials["Ellipse Material"]}
+              castShadow
+              receiveShadow
+              position={[0, 1.15, 0]}
+              rotation={[0, 0, 1.61]}
+              scale={1}
+            />
+            <mesh
+              name="Rectangle"
+              geometry={nodes.Rectangle.geometry}
+              material={materials["Rectangle Material"]}
+              castShadow
+              receiveShadow
+              position={[0, 55.68, 0]}
+              rotation={[0, 0, 1.61]}
+              scale={[1, 1, 11.55]}
+            />
+          </group>
+          <group name="Wijzers dekplaat" position={[-539.38, 1, 175.58]}>
+            <mesh
+              name="Ellipse 2"
+              geometry={nodes["Ellipse 2"].geometry}
+              material={materials["Ellipse 2 Material"]}
+              castShadow
+              receiveShadow
+              position={[0, 1, 0]}
+            />
+            <mesh
+              name="Ellipse1"
+              geometry={nodes.Ellipse1.geometry}
+              material={materials["Wijzer zwart"]}
+              castShadow
+              receiveShadow
+              position={[0, 1, 0]}
+            />
+          </group>
           <mesh
-            name="Wijzer wit"
-            geometry={nodes["Wijzer wit"].geometry}
-            material={materials["Wijzer wit Material"]}
+            name="Knop"
+            geometry={nodes.Knop.geometry}
+            material={nodes.Knop.material}
             castShadow
             receiveShadow
-            position={[0, 99.2, 0]}
-            rotation={[0, 0, Math.PI / 2]}
+            position={[-538.38, 231.61, 85.88]}
           />
           <mesh
-            name="Wijzer zwart"
-            geometry={nodes["Wijzer zwart"].geometry}
-            material={materials["Wijzer zwart"]}
+            name="Ellipse2"
+            geometry={nodes.Ellipse2.geometry}
+            material={materials["Ellipse2 Material"]}
             castShadow
             receiveShadow
-            position={[0, 67.84, 0]}
-            rotation={[0, 0, Math.PI / 2]}
+            position={[-538.38, 1, 158.85]}
+          />
+          <mesh
+            name="Case white"
+            geometry={nodes["Case white"].geometry}
+            material={nodes["Case white"].material}
+            castShadow
+            receiveShadow
+            position={[-538.38, 1, 10.84]}
+          />
+          <mesh
+            name="Case orange"
+            geometry={nodes["Case orange"].geometry}
+            material={nodes["Case orange"].material}
+            castShadow
+            receiveShadow
+            position={[-538.38, 1, 4.95]}
+          />
+          <mesh
+            name="Vloersteun"
+            geometry={nodes.Vloersteun.geometry}
+            material={materials["Orange case"]}
+            castShadow
+            receiveShadow
+            position={[-539.38, -195.45, 21.22]}
           />
         </group>
-        <group
-          name="Wijzer -klein"
-          position={[-539.38, 1, 174.17]}
-          rotation={[0, 0, hoursDegree]}
-        >
-          <mesh
-            name="Wijzer wit1"
-            geometry={nodes["Wijzer wit1"].geometry}
-            material={materials["Wijzer wit1 Material"]}
-            castShadow
-            receiveShadow
-            position={[0, 66.92, 0]}
-            rotation={[0, 0, Math.PI / 2]}
-          />
-          <mesh
-            name="Wijzer zwart1"
-            geometry={nodes["Wijzer zwart1"].geometry}
-            material={materials["Wijzer zwart"]}
-            castShadow
-            receiveShadow
-            position={[0, 44.24, 0]}
-            rotation={[0, 0, Math.PI / 2]}
-          />
-        </group>
-        <group
-          name="Secondenwijzer"
-          position={[-539.38, 0.54, 166.34]}
-          rotation={[0, 0, secondsDegree]}
-        >
-          <mesh
-            name="Ellipse"
-            geometry={nodes.Ellipse.geometry}
-            material={materials["Ellipse Material"]}
-            castShadow
-            receiveShadow
-            position={[0, 1.15, 0]}
-            rotation={[0, 0, 1.61]}
-            scale={1}
-          />
-          <mesh
-            name="Rectangle"
-            geometry={nodes.Rectangle.geometry}
-            material={materials["Rectangle Material"]}
-            castShadow
-            receiveShadow
-            position={[0, 55.68, 0]}
-            rotation={[0, 0, 1.61]}
-            scale={[1, 1, 11.55]}
-          />
-        </group>
-        <group name="Wijzers dekplaat" position={[-539.38, 1, 175.58]}>
-          <mesh
-            name="Ellipse 2"
-            geometry={nodes["Ellipse 2"].geometry}
-            material={materials["Ellipse 2 Material"]}
-            castShadow
-            receiveShadow
-            position={[0, 1, 0]}
-          />
-          <mesh
-            name="Ellipse1"
-            geometry={nodes.Ellipse1.geometry}
-            material={materials["Wijzer zwart"]}
-            castShadow
-            receiveShadow
-            position={[0, 1, 0]}
-          />
-        </group>
-        <mesh
-          name="Knop"
-          geometry={nodes.Knop.geometry}
-          material={nodes.Knop.material}
-          castShadow
-          receiveShadow
-          position={[-538.38, 231.61, 85.88]}
-        />
-        <mesh
-          name="Ellipse2"
-          geometry={nodes.Ellipse2.geometry}
-          material={materials["Ellipse2 Material"]}
-          castShadow
-          receiveShadow
-          position={[-538.38, 1, 158.85]}
-        />
-        <mesh
-          name="Case white"
-          geometry={nodes["Case white"].geometry}
-          material={nodes["Case white"].material}
-          castShadow
-          receiveShadow
-          position={[-538.38, 1, 10.84]}
-        />
-        <mesh
-          name="Case orange"
-          geometry={nodes["Case orange"].geometry}
-          material={nodes["Case orange"].material}
-          castShadow
-          receiveShadow
-          position={[-538.38, 1, 4.95]}
-        />
-        <mesh
-          name="Vloersteun"
-          geometry={nodes.Vloersteun.geometry}
-          material={materials["Orange case"]}
-          castShadow
-          receiveShadow
-          position={[-539.38, -195.45, 21.22]}
-        />
         <group name="Achtergrond" position={[-305.41, 0, -300.99]}>
           <mesh
             name="Cube 4"
@@ -261,6 +265,17 @@ export default function Scene({
           color="#b49e85"
         />
       </group>
+
+      {/* We can drop the HTML inside, make it a 3d-transform and portal it to the dom container above */}
+      <Html
+        className="content-embed"
+        scale={40}
+        transform
+        position={[500, 300, 120]}
+        rotation={[-0.2, 0, 0]}
+      >
+        <Agenda />
+      </Html>
     </>
   );
 }

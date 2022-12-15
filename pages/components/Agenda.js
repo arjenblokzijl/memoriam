@@ -8,7 +8,7 @@ import Clock from "../../svg/clock.svg";
 
 export default function Agenda() {
   return (
-    <div className="w-full max-w-md p-5 bg-brown-80">
+    <div className="w-full max-w-md p-5 ">
       <h1 className="font-medium uppercase pb-7 font-montserrat text-brown-200">
         {" "}
         <span className="font-bold">december</span> 2022{" "}
