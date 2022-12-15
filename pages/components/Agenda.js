@@ -117,7 +117,7 @@ export default function Agenda() {
 
         <div className="flex flex-row items-start justify-between py-4">
           <div className="flex items-center p-1.5 bg-white border rounded-sm border-brown-90">
-            <Moon height={34} width={34} />
+            <Moon height={36} width={36} />
           </div>
 
           <div className="flex-col">
