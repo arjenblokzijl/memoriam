@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev & npx tailwindcss -i ./styles/tailwind.css -o ./styles/globals.css --watch",
+    "build": "npx tailwindcss -i ./styles/tailwind.css -o ./styles/globals.css  && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -14,5 +14,8 @@
     "next": "13.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
   }
 }
