@@ -4,8 +4,7 @@ import { Suspense } from "react";
 import Scene from "./components/Scene";
 import { useState, useEffect } from "react";
 import { OrbitControls } from "@react-three/drei";
-
-import { Html } from "@react-three/drei";
+import SceneLarge from "./components/SceneLarge";
 
 export default function Home() {
   const [date, setDate] = useState(new Date());
@@ -18,6 +17,10 @@ export default function Home() {
     };
   });
 
+  const secondsDegree = (date.getSeconds() / 60) * 360;
+  const minutesDegree = (date.getMinutes() / 60) * 360;
+  const hoursDegree = (date.getHours() / 12) * 360;
+
   return (
     <div>
       <Head>
@@ -29,10 +32,13 @@ export default function Home() {
       <main className="w-screen h-screen bg-slate-200">
         <Suspense fallback="Ik heb een zwaar leven">
           <Canvas shadows flat linear>
-            <Scene className="min-h-screen" date={date} />
+            <SceneLarge
+              className="min-h-screen"
+              secondsDegree={secondsDegree}
+              minutesDegree={minutesDegree}
+              hoursDegree={hoursDegree}
+            />
             <OrbitControls />
-
-            <Html>This is going to be an iframe</Html>
           </Canvas>
         </Suspense>
       </main>
