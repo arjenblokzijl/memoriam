@@ -11,7 +11,7 @@ export default function Agenda() {
     <div className="w-full max-w-md p-5 bg-brown-80">
       <h1 className="font-medium uppercase pb-7 font-montserrat text-brown-200">
         {" "}
-        <span className="font-bold">Januari</span> 2022{" "}
+        <span className="font-bold">december</span> 2022{" "}
       </h1>
 
       <article>
