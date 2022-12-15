@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -20,15 +21,15 @@ export default function Home() {
         </p>
 
         <div>
-          <a href="/agenda">
+          <Link href="/agenda">
             <h2>Agenda &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          </Link>
 
-          <a href="/clock">
+          <Link href="/clock">
             <h2>Clock &rarr;</h2>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          </Link>
 
         </div>
       </main>

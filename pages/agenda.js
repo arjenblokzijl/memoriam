@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -22,10 +23,10 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <a href="/" className={styles.card}>
+          <Link href="/" className={styles.card}>
             <h2>Home &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          </Link>
 
         </div>
       </main>
