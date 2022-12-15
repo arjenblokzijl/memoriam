@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^13.0.7",
+    "@svgr/webpack": "^6.5.1",
     "@react-three/drei": "^9.46.7",
     "@react-three/fiber": "^8.9.1",
     "@splinetool/loader": "^0.9.156",

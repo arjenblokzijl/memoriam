@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine&family=Montserrat:wght@500&display=swap');
+
 /*
 ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
 */
@@ -419,7 +421,7 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
+*, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -466,7 +468,7 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-::backdrop {
+::backdrop{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -513,19 +515,260 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.h-screen {
+.flex{
+  display: flex;
+}
+
+.h-screen{
   height: 100vh;
 }
 
-.min-h-screen {
+.h-10{
+  height: 2.5rem;
+}
+
+.h-5{
+  height: 1.25rem;
+}
+
+.h-12{
+  height: 3rem;
+}
+
+.h-20{
+  height: 5rem;
+}
+
+.min-h-screen{
   min-height: 100vh;
 }
 
-.w-screen {
+.w-full{
+  width: 100%;
+}
+
+.w-10{
+  width: 2.5rem;
+}
+
+.w-64{
+  width: 16rem;
+}
+
+.w-5{
+  width: 1.25rem;
+}
+
+.w-80{
+  width: 20rem;
+}
+
+.w-screen{
   width: 100vw;
 }
 
-.bg-slate-200 {
+.w-40{
+  width: 10rem;
+}
+
+.w-12{
+  width: 3rem;
+}
+
+.w-20{
+  width: 5rem;
+}
+
+.max-w-md{
+  max-width: 28rem;
+}
+
+.flex-row{
+  flex-direction: row;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.items-start{
+  align-items: flex-start;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.justify-between{
+  justify-content: space-between;
+}
+
+.rounded-sm{
+  border-radius: 0.125rem;
+}
+
+.border-2{
+  border-width: 2px;
+}
+
+.border{
+  border-width: 1px;
+}
+
+.border-b{
+  border-bottom-width: 1px;
+}
+
+.border-solid{
+  border-style: solid;
+}
+
+.border-slate-50{
+  --tw-border-opacity: 1;
+  border-color: rgb(248 250 252 / var(--tw-border-opacity));
+}
+
+.border-red-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
+.border-brown-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(98 74 36 / var(--tw-border-opacity));
+}
+
+.bg-slate-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
+}
+
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-brown-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(223 216 207 / var(--tw-bg-opacity));
+}
+
+.bg-slate-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
+.bg-slate-200{
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
+
+.bg-\[length\:200px_100px\]{
+  background-size: 200px 100px;
+}
+
+.p-5{
+  padding: 1.25rem;
+}
+
+.p-1{
+  padding: 0.25rem;
+}
+
+.p-7{
+  padding: 1.75rem;
+}
+
+.p-12{
+  padding: 3rem;
+}
+
+.p-6{
+  padding: 1.5rem;
+}
+
+.p-3{
+  padding: 0.75rem;
+}
+
+.p-2{
+  padding: 0.5rem;
+}
+
+.py-5{
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.py-4{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.pb-4{
+  padding-bottom: 1rem;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.font-domine{
+  font-family: Domine,serif;
+}
+
+.text-\[15px\]{
+  font-size: 15px;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.font-extrabold{
+  font-weight: 800;
+}
+
+.font-bold{
+  font-weight: 700;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.text-brown-200{
+  --tw-text-opacity: 1;
+  color: rgb(98 74 36 / var(--tw-text-opacity));
+}
+
+.text-orange-400{
+  --tw-text-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-text-opacity));
+}
+
